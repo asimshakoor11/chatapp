@@ -6,11 +6,6 @@ const messageRoutes = require("./routes/messages");
 const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
-
-header.Add("Access-Control-Allow-Origin", "*")
-header.Add("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
-header.Add("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
-
 app.use(cors(
   {
     origin: "https://chatapp-front.vercel.app",
