@@ -11,7 +11,13 @@ header.Add("Access-Control-Allow-Origin", "*")
 header.Add("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS")
 header.Add("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With")
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: "https://chatapp-front.vercel.app",
+    methofd: ["POST", "GET"],
+    credentials: true,
+  }
+));
 app.use(express.json());
 
 mongoose
